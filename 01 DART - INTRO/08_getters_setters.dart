@@ -35,3 +35,32 @@ class Square {
     return _side * _side;
   }
 }
+
+//--------------------------------------------------------------
+
+void main() {
+  var p = Persona('Camilo', 25);
+
+  print(p.nombre); // Camilo
+
+  p.nombre = 'Andrés'; // Usando el setter
+  print(p.nombre); // Andrés
+}
+
+class Persona {
+  String _nombre;
+  int _edad;
+
+  Persona(this._nombre, this._edad);
+
+  // Getter
+  String get nombre => _nombre;
+
+  // Setter
+  set nombre(String nuevoNombre) {
+    if (nuevoNombre.isNotEmpty) {
+      _nombre = nuevoNombre;
+    }
+  }
+}
+
