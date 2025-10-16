@@ -1,9 +1,21 @@
 void main() async{
   print('hola bienvenido quien eres');
+
+  try{
   String nombrepersona = await datospersona();
   print('hola soy $nombrepersona');
+  }
+  catch (e){
+    print('error no se pudo obtener la nombre: $e');
+  }
+
+  try{
   int epersona = await edadpersona();
   print('mi edad es de $epersona');
+  }
+  catch (e){
+    print('no se pudo obtener la edad: $e');
+  }
 }
 
 Future<String> datospersona() async{
