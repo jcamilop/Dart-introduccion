@@ -1,35 +1,13 @@
-void main() async{
-  print('hola bienvenido quien eres');
-
-  try{
-  String nombrepersona = await datospersona();
-  print('hola soy $nombrepersona');
-  }
-  catch (e){
-    print('error no se pudo obtener la nombre: $e');
-  }
-
-  try{
-  int epersona = await edadpersona();
-  print('mi edad es de $epersona');
-  }
-  catch (e){
-    print('no se pudo obtener la edad: $e');
-  }
+void main()async{
+  print('hola bienvenido quien eres?');
+  final nombreP = await nombrepersona();
+  print('hola soy $nombreP');
 }
 
-Future<String> datospersona() async{
-  
+Future<String> nombrepersona() async{
   await Future.delayed(Duration(seconds: 2));
-  return 'camilo';
+  return 'juan camilo';
 }
-
-Future<int> edadpersona() async{
-  
-  await Future.delayed(Duration(seconds: 3));
-  return 26;
-}
-
 
 
 
